@@ -1,0 +1,84 @@
+name: Generate Azure Locations Map
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '12 3 * * *' # daily at 03:12 UTC
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      id-token: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Azure CLI login
+        uses: azure/login@v2
+        with:
+          tenant-id: ${{ secrets.TENANT_ID }}
+          client-id: ${{ secrets.CLIENT_ID }}
+          subscription-id: ${{ secrets.SUBSCRIPTION_ID }}
+      - name: Generate GeoJSON
+        shell: pwsh
+        run: |
+          $locations=az account list-locations --query "[?metadata.regionType=='Physical']"|convertfrom-json|sort-object id
+          'View on [geojson.io](https://geojson.io/#data=data:text/x-url,https%3A%2F%2Fraw.githubusercontent.com%2Fmaskati%2Fazure-locations-map%2Frefs%2Fheads%2Fmain%2Fazure-locations-map.geojson)' >> README.md
+          '```geojson' >> README.md
+          [ordered]@{
+            type='FeatureCollection'
+            features=$(
+              $locations `
+              |?{$_.metadata.pairedRegion.count -eq 1} `
+              |%{
+                $r=$_
+                $p=$locations|?{$_.name -eq $r.metadata.pairedRegion[0].name}|select -first 1
+                if($null -ne $p -and -not (($r.metadata.longitude -eq 0 -and $r.metadata.latitude -eq 0) -or ($p.metadata.longitude -eq 0 -and $p.metadata.latitude -eq 0))){
+                  [ordered]@{
+                    type='Feature'
+                    properties=[ordered]@{
+                      region=$r.name
+                      paired=$p.name
+                    }
+                    geometry=[ordered]@{
+                      type='LineString'
+                      coordinates=@(@([double]$r.metadata.longitude,[double]$r.metadata.latitude),@([double]$p.metadata.longitude,[double]$p.metadata.latitude))
+                    }
+                  }
+                }
+              }
+            )+$(
+              $locations `
+              |?{-not ($_.metadata.longitude -eq 0 -and $_.metadata.latitude -eq 0)} `
+              |%{[ordered]@{
+                type='Feature'
+                properties=[ordered]@{
+                  name=$_.name
+                  displayName=$_.displayName
+                  physicalLocation=$_.metadata.physicalLocation
+                  regionType=$_.metadata.regionType
+                  regionCategory=$_.metadata.regionCategory
+                  pairedRegions=($_.metadata.pairedRegion.name -join ',')
+                  'marker-symbol'='communications-tower'
+                }
+                geometry=[ordered]@{
+                  coordinates=@([double]$_.metadata.longitude,[double]$_.metadata.latitude)
+                  type='Point'
+                }
+              }
+            }
+          )}|convertto-json -depth 5 | tee-object azure-locations-map.geojson >> README.md
+          '```' >> README.md
+      - name: Git config as workflow named bot
+        run: |
+          git config user.name "GitHub Actions (${{ github.workflow }})"
+          git config user.email "<>"
+      - name: Git add and commit
+        run: |
+          git add azure-locations-map.geojson
+          git add README.md
+          git diff-index --quiet HEAD || git commit -m 'Update of Azure Locations Map'
+      - name: Git push
+        run: |
+          git push origin main
