@@ -24,7 +24,7 @@ jobs:
         shell: pwsh
         run: |
           $locations=az account list-locations --query "[?metadata.regionType=='Physical']"|convertfrom-json|sort-object id
-          'View on [geojson.io](https://geojson.io/#data=data:text/x-url,https%3A%2F%2Fraw.githubusercontent.com%2Fmaskati%2Fazure-locations-map%2Frefs%2Fheads%2Fmain%2Fazure-locations-map.geojson)' >> README.md
+          'View on [geojson.io](https://geojson.io/#data=data:text/x-url,https%3A%2F%2Fraw.githubusercontent.com%2Fmaskati%2Fazure-locations-map%2Frefs%2Fheads%2Fmain%2Fazure-locations-map.geojson)' > README.md
           '```geojson' >> README.md
           [ordered]@{
             type='FeatureCollection'
