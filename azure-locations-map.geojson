@@ -1344,25 +1344,6 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "indonesiacentral",
-        "displayName": "Indonesia Central",
-        "physicalLocation": "Jakarta",
-        "regionType": "Physical",
-        "regionCategory": "Recommended",
-        "pairedRegions": "",
-        "marker-symbol": "communications-tower"
-      },
-      "geometry": {
-        "coordinates": [
-          106.816666,
-          -6.2
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "name": "israelcentral",
         "displayName": "Israel Central",
         "physicalLocation": "Israel",
@@ -1424,7 +1405,7 @@
         "displayName": "Japan West",
         "physicalLocation": "Osaka",
         "regionType": "Physical",
-        "regionCategory": "Recommended",
+        "regionCategory": "Other",
         "pairedRegions": "japaneast",
         "marker-symbol": "communications-tower"
       },
