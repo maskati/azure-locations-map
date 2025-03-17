@@ -1346,6 +1346,25 @@ View on [geojson.io](https://geojson.io/#data=data:text/x-url,https%3A%2F%2Fraw.
     {
       "type": "Feature",
       "properties": {
+        "name": "indonesiacentral",
+        "displayName": "Indonesia Central",
+        "physicalLocation": "Jakarta",
+        "regionType": "Physical",
+        "regionCategory": "Recommended",
+        "pairedRegions": "",
+        "marker-symbol": "communications-tower"
+      },
+      "geometry": {
+        "coordinates": [
+          106.816666,
+          -6.2
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "name": "israelcentral",
         "displayName": "Israel Central",
         "physicalLocation": "Israel",
@@ -1407,7 +1426,7 @@ View on [geojson.io](https://geojson.io/#data=data:text/x-url,https%3A%2F%2Fraw.
         "displayName": "Japan West",
         "physicalLocation": "Osaka",
         "regionType": "Physical",
-        "regionCategory": "Other",
+        "regionCategory": "Recommended",
         "pairedRegions": "japaneast",
         "marker-symbol": "communications-tower"
       },
