@@ -1175,25 +1175,6 @@ View on [geojson.io](https://geojson.io/#data=data:text/x-url,https%3A%2F%2Fraw.
     {
       "type": "Feature",
       "properties": {
-        "name": "chilecentral",
-        "displayName": "Chile Central",
-        "physicalLocation": "Santiago",
-        "regionType": "Physical",
-        "regionCategory": "Recommended",
-        "pairedRegions": "",
-        "marker-symbol": "communications-tower"
-      },
-      "geometry": {
-        "coordinates": [
-          -70.673676,
-          -33.447487
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "name": "eastasia",
         "displayName": "East Asia",
         "physicalLocation": "Hong Kong",
@@ -1529,25 +1510,6 @@ View on [geojson.io](https://geojson.io/#data=data:text/x-url,https%3A%2F%2Fraw.
         "coordinates": [
           129.0756,
           35.1796
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "malaysiawest",
-        "displayName": "Malaysia West",
-        "physicalLocation": "Kuala Lumpur",
-        "regionType": "Physical",
-        "regionCategory": "Recommended",
-        "pairedRegions": "",
-        "marker-symbol": "communications-tower"
-      },
-      "geometry": {
-        "coordinates": [
-          101.693207,
-          3.140853
         ],
         "type": "Point"
       }
