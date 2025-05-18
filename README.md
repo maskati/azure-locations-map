@@ -1255,7 +1255,7 @@ View on [geojson.io](https://geojson.io/#data=data:text/x-url,https%3A%2F%2Fraw.
         "displayName": "East US 2 EUAP",
         "physicalLocation": "",
         "regionType": "Physical",
-        "regionCategory": "Other",
+        "regionCategory": "Recommended",
         "pairedRegions": "centraluseuap",
         "marker-symbol": "communications-tower"
       },
