@@ -1042,25 +1042,6 @@ View on [geojson.io](https://geojson.io/#data=data:text/x-url,https%3A%2F%2Fraw.
     {
       "type": "Feature",
       "properties": {
-        "name": "austriaeast",
-        "displayName": "Austria East",
-        "physicalLocation": "Vienna",
-        "regionType": "Physical",
-        "regionCategory": "Recommended",
-        "pairedRegions": "",
-        "marker-symbol": "communications-tower"
-      },
-      "geometry": {
-        "coordinates": [
-          48.2201153,
-          16.214834
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "name": "brazilsouth",
         "displayName": "Brazil South",
         "physicalLocation": "Sao Paulo State",
@@ -1768,7 +1749,7 @@ View on [geojson.io](https://geojson.io/#data=data:text/x-url,https%3A%2F%2Fraw.
         "displayName": "South Central US",
         "physicalLocation": "Texas",
         "regionType": "Physical",
-        "regionCategory": "Other",
+        "regionCategory": "Recommended",
         "pairedRegions": "northcentralus",
         "marker-symbol": "communications-tower"
       },
