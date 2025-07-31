@@ -2089,7 +2089,7 @@
         "displayName": "West US 3",
         "physicalLocation": "Phoenix",
         "regionType": "Physical",
-        "regionCategory": "Recommended",
+        "regionCategory": "Other",
         "pairedRegions": "eastus",
         "marker-symbol": "communications-tower"
       },

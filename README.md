@@ -2091,7 +2091,7 @@ View on [geojson.io](https://geojson.io/#data=data:text/x-url,https%3A%2F%2Fraw.
         "displayName": "West US 3",
         "physicalLocation": "Phoenix",
         "regionType": "Physical",
-        "regionCategory": "Recommended",
+        "regionCategory": "Other",
         "pairedRegions": "eastus",
         "marker-symbol": "communications-tower"
       },
