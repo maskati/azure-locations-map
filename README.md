@@ -1052,8 +1052,27 @@ View on [geojson.io](https://geojson.io/#data=data:text/x-url,https%3A%2F%2Fraw.
       },
       "geometry": {
         "coordinates": [
-          48.2201153,
-          16.214834
+          16.3727779,
+          48.2092056
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "belgiumcentral",
+        "displayName": "Belgium Central",
+        "physicalLocation": "Brussels",
+        "regionType": "Physical",
+        "regionCategory": "Recommended",
+        "pairedRegions": "",
+        "marker-symbol": "communications-tower"
+      },
+      "geometry": {
+        "coordinates": [
+          4.355707169,
+          50.84553528
         ],
         "type": "Point"
       }
