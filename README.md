@@ -1232,6 +1232,25 @@ View on [geojson.io](https://geojson.io/#data=data:text/x-url,https%3A%2F%2Fraw.
     {
       "type": "Feature",
       "properties": {
+        "name": "denmarkeast",
+        "displayName": "Denmark East",
+        "physicalLocation": "Copenhagen",
+        "regionType": "Physical",
+        "regionCategory": "Other",
+        "pairedRegions": "",
+        "marker-symbol": "communications-tower"
+      },
+      "geometry": {
+        "coordinates": [
+          12.56553,
+          55.67594
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "name": "eastasia",
         "displayName": "East Asia",
         "physicalLocation": "Hong Kong",
