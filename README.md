@@ -1422,25 +1422,6 @@ View on [geojson.io](https://geojson.io/#data=data:text/x-url,https%3A%2F%2Fraw.
     {
       "type": "Feature",
       "properties": {
-        "name": "indiasouthcentral",
-        "displayName": "India South Central",
-        "physicalLocation": "Hyderabad",
-        "regionType": "Physical",
-        "regionCategory": "Recommended",
-        "pairedRegions": "",
-        "marker-symbol": "communications-tower"
-      },
-      "geometry": {
-        "coordinates": [
-          78.47599792,
-          17.36599922
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "name": "indonesiacentral",
         "displayName": "Indonesia Central",
         "physicalLocation": "Jakarta",
