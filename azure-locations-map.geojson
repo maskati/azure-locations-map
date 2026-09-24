@@ -404,26 +404,6 @@
     {
       "type": "Feature",
       "properties": {
-        "region": "indiasouthcentral",
-        "paired": "centralindia"
-      },
-      "geometry": {
-        "type": "LineString",
-        "coordinates": [
-          [
-            78.47599792,
-            17.36599922
-          ],
-          [
-            73.9197,
-            18.5822
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "region": "japaneast",
         "paired": "japanwest"
       },
@@ -1445,7 +1425,7 @@
         "physicalLocation": "Hyderabad",
         "regionType": "Physical",
         "regionCategory": "Recommended",
-        "pairedRegions": "centralindia",
+        "pairedRegions": "",
         "marker-symbol": "communications-tower"
       },
       "geometry": {
