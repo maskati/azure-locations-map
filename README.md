@@ -406,6 +406,26 @@ View on [geojson.io](https://geojson.io/#data=data:text/x-url,https%3A%2F%2Fraw.
     {
       "type": "Feature",
       "properties": {
+        "region": "indiasouthcentral",
+        "paired": "centralindia"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.47599792,
+            17.36599922
+          ],
+          [
+            73.9197,
+            18.5822
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "region": "japaneast",
         "paired": "japanwest"
       },
@@ -1427,7 +1447,7 @@ View on [geojson.io](https://geojson.io/#data=data:text/x-url,https%3A%2F%2Fraw.
         "physicalLocation": "Hyderabad",
         "regionType": "Physical",
         "regionCategory": "Recommended",
-        "pairedRegions": "",
+        "pairedRegions": "centralindia",
         "marker-symbol": "communications-tower"
       },
       "geometry": {
