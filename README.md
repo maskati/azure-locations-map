@@ -1898,25 +1898,6 @@ View on [geojson.io](https://geojson.io/#data=data:text/x-url,https%3A%2F%2Fraw.
     {
       "type": "Feature",
       "properties": {
-        "name": "southeastasia3",
-        "displayName": "Southeast Asia 3",
-        "physicalLocation": "Senai",
-        "regionType": "Physical",
-        "regionCategory": "Recommended",
-        "pairedRegions": "",
-        "marker-symbol": "communications-tower"
-      },
-      "geometry": {
-        "coordinates": [
-          103.630158,
-          1.62378
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "name": "southindia",
         "displayName": "South India",
         "physicalLocation": "Chennai",
@@ -2005,25 +1986,6 @@ View on [geojson.io](https://geojson.io/#data=data:text/x-url,https%3A%2F%2Fraw.
         "coordinates": [
           6.143158,
           46.204391
-        ],
-        "type": "Point"
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "taiwannorth",
-        "displayName": "Taiwan North",
-        "physicalLocation": "Taipei",
-        "regionType": "Physical",
-        "regionCategory": "Recommended",
-        "pairedRegions": "taiwannorthwest",
-        "marker-symbol": "communications-tower"
-      },
-      "geometry": {
-        "coordinates": [
-          121.3662962,
-          25.0174719
         ],
         "type": "Point"
       }
